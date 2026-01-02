@@ -10,6 +10,7 @@ function App() {
   }
 
   let collageName = ["IIT","IIIT","NIT","AIT"]
+  //input feild value get and update with state
   const [val,setVal]= useState("Ravi");
 
   return (
@@ -18,7 +19,7 @@ function App() {
       <br></br>
       <h1>{val}</h1>
       <button type="button" onClick={()=>{setVal("")}}>  clear val</button>
-
+    {/* end section */}
         <Student name={studentData} college={collageName} />
 
 
