@@ -1,35 +1,39 @@
 import { useState } from "react";
 import Student from "./Student";
-import User from "./User";
+import Collage from "./Collage";
 function App() {
- 
-  let studentData ={
-    name : "Ravi Jangid",
-    Age : "29",
-    class : "KI"
-  }
+let student1 = {
+  name : "ravi Jangid",
+  email : "ravi@test.com"
+}
+let student2 = {
+  name : "Arun Jangid",
+  email : "Arun@test.com"
+}
+let student3 = {
+  name : "Shaym Jangid",
+  email : "Arun@test.com"
+}
 
-  let collageName = ["IIT","IIIT","NIT","AIT"]
-  //input feild value get and update with state
-  const [val,setVal]= useState("Ravi");
+let collageAry = ["IIT","NIT","ARYA"];
 
+// const [val,setVal] = useState("");
+
+
+// let contact = "779797999"
+const [val,setVal] = useState("");
   return (
-   <div>
-      <input type="text" onChange={()=>{setVal(event.target.value)}} value={val} name="input"></input>
-      <br></br>
+    <div>
+     <h1>Props in React js</h1>
+      {/* <Student name={student} contact={contact}/> */}
+      <Student user={student1} collage={collageAry}/>
+      <Student user={student2} collage={collageAry}/>
+
+      <Student user={student3} collage={collageAry}/>
+      <Collage collage={collageAry} />
       <h1>{val}</h1>
-      <button type="button" onClick={()=>{setVal("")}}>  clear val</button>
-    {/* end section */}
-        <Student name={studentData} college={collageName} />
-
-
-
-      { 
-        <User />
-
-      }
-
-   </div>
+      <button onClick={()=>setVal()}>Click Me</button>
+    </div>
   )
 }
 
