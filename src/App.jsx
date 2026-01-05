@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Student from "./Student";
 import Collage from "./Collage";
+import CheckBoxes from "./Checkboxes";
 function App() {
 let student1 = {
   name : "ravi Jangid",
@@ -32,7 +33,8 @@ const [val,setVal] = useState("");
       <Student user={student3} collage={collageAry}/>
       <Collage collage={collageAry} />
       <h1>{val}</h1>
-      <button onClick={()=>setVal()}>Click Me</button>
+      <button onClick={()=>setVal("Clicked")}>Click Me</button>
+       <CheckBoxes />
     </div>
   )
 }
