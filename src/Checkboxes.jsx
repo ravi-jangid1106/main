@@ -9,7 +9,7 @@ function CheckBoxes(){
             setName([...name,event.target.value]);
         }
         else{
-            setName([...name.filter((e)=>e!=event.target.value)])
+            setName([...name.filter((e)=>e !== event.target.value)])
         }
         
     }
@@ -28,7 +28,7 @@ function CheckBoxes(){
             <label htmlFor="java">Java</label><br />
             <input type="checkbox" onChange={handelCheckbox} value="html" id="html" />
             <label htmlFor="html">Html</label><br />
-            <input type="checkbox" onChange={handelCheckbox} value="react" id="react  " />
+            <input type="checkbox" onChange={handelCheckbox} value="react" id="react" />
             <label htmlFor="react">React</label><br />
 
         <h1>{name.toString()}</h1>
