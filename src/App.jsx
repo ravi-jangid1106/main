@@ -4,7 +4,11 @@ import Collage from "./Collage";
 import CheckBoxes from "./Checkboxes";
 import Radio from "./Radio";
 import Table from "./Table";
+import Clockdropdown from "./Clockdropdown";
+import Clock from "./Clock";
+import { useState } from "react";
 function App() {
+  const [color,setColor] = useState("Red");
 // let student1 = {
 //   name : "ravi Jangid",
 //   email : "ravi@test.com"
@@ -39,9 +43,12 @@ function App() {
       <h1> checkboxes in React </h1>
        <CheckBoxes /> */}
 
-       <h1>Radio Button</h1>
+       {/* <h1>Radio Button</h1>
        <Radio />
-       <Table />
+       <Table /> */}
+
+       <Clockdropdown color={setColor}/>
+       <Clock color={color}/>
     </div>
   )
 }
